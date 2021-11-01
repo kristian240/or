@@ -1,0 +1,39 @@
+id,ime,prezime,nacionalni_klub,klub,datum_rodjenja,mjesto_rodjenja,otac,majka,razina_obrazovanja,naziv,akronim,uloga
+1,Karlo,Ressler,HDZ,Klub zastupnika Europske pučke stranke,1989-12-26,Zagreb,Dubravko,Ančica,magistarski studiji,"Odbor za građanske slobode, pravosuđe i unutarnje poslove",LIBE,zamjenik
+1,Karlo,Ressler,HDZ,Klub zastupnika Europske pučke stranke,1989-12-26,Zagreb,Dubravko,Ančica,magistarski studiji,Odbor za proračune,BUDG,clan
+1,Karlo,Ressler,HDZ,Klub zastupnika Europske pučke stranke,1989-12-26,Zagreb,Dubravko,Ančica,magistarski studiji,Posebni odbor za umjetnu inteligenciju u digitalnom dobu,AIDA,potpredsjenik
+2,Biljana,Borzan,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1971-11-29,Osijek,Jovo,Rosa,poslijediplomski sveučilišni (doktorski) studiji,"Odbor za okoliš, javno zdravlje i sigurnost hrane",ENVI,zamjenik
+2,Biljana,Borzan,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1971-11-29,Osijek,Jovo,Rosa,poslijediplomski sveučilišni (doktorski) studiji,Odbor za unutarnje tržište i zaštitu potrošača,IMCO,clan
+3,Valter,Flego,IDS,Klub zastupnika Renew Europe,1972-08-15,Koper,Đino,Marija,sveučilišni diplomski studiji,"Odbor za industriju, istraživanje i energetiku",ITRE,clan
+3,Valter,Flego,IDS,Klub zastupnika Renew Europe,1972-08-15,Koper,Đino,Marija,sveučilišni diplomski studiji,Odbor za poljoprivredu i ruralni razvoj,AGRI,zamjenik
+3,Valter,Flego,IDS,Klub zastupnika Renew Europe,1972-08-15,Koper,Đino,Marija,sveučilišni diplomski studiji,Odbor za promet i turizam,TRAN,zamjenik
+4,Sunčana,Glavak,HDZ,Klub zastupnika Europske pučke stranke,1968-12-09,Čakovec,,,poslijediplomski sveučilišni (doktorski) studiji,"Odbor za okoliš, javno zdravlje i sigurnost hrane",ENVI,zamjenik
+4,Sunčana,Glavak,HDZ,Klub zastupnika Europske pučke stranke,1968-12-09,Čakovec,,,poslijediplomski sveučilišni (doktorski) studiji,Odbor za vanjske poslove,AFET,clan
+4,Sunčana,Glavak,HDZ,Klub zastupnika Europske pučke stranke,1968-12-09,Čakovec,,,poslijediplomski sveučilišni (doktorski) studiji,Posebni odbor za borbu protiv raka,BECA,zamjenik
+4,Sunčana,Glavak,HDZ,Klub zastupnika Europske pučke stranke,1968-12-09,Čakovec,,,poslijediplomski sveučilišni (doktorski) studiji,"Posebni odbor za vanjsko upletanje u sve demokratske procese u Europskoj uniji, uključujući dezinformiranje",INGE,clan
+5,Ladislav,Ilčić,HRAST,Europski konzervativci i reformisti,1970-08-04,Varaždin,Stanko,Julijana,poslijediplomski sveučilišni (doktorski) studiji,"Odbor za industriju, istraživanje i energetiku",ITRE,zamjenik
+5,Ladislav,Ilčić,HRAST,Europski konzervativci i reformisti,1970-08-04,Varaždin,Stanko,Julijana,poslijediplomski sveučilišni (doktorski) studiji,Odbor za poljoprivredu i ruralni razvoj,AGRI,zamjenik
+5,Ladislav,Ilčić,HRAST,Europski konzervativci i reformisti,1970-08-04,Varaždin,Stanko,Julijana,poslijediplomski sveučilišni (doktorski) studiji,Odbor za ribarstvo,PECH,clan
+6,Tonino,Picula,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1961-08-31,Mali Lošinj,,,sveučilišni diplomski studiji,Odbor za poljoprivredu i ruralni razvoj,AGRI,zamjenik
+6,Tonino,Picula,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1961-08-31,Mali Lošinj,,,sveučilišni diplomski studiji,Odbor za regionalni razvoj,REGI,zamjenik
+6,Tonino,Picula,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1961-08-31,Mali Lošinj,,,sveučilišni diplomski studiji,Odbor za vanjske poslove,AFET,clan
+6,Tonino,Picula,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1961-08-31,Mali Lošinj,,,sveučilišni diplomski studiji,Pododbor za sigurnost i obranu,SEDE,zamjenik
+6,Tonino,Picula,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1961-08-31,Mali Lošinj,,,sveučilišni diplomski studiji,"Posebni odbor za vanjsko upletanje u sve demokratske procese u Europskoj uniji, uključujući dezinformiranje",INGE,clan
+7,Predrag Fred,Matić,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1962-06-02,Požega,Stanko,,sveučilišni preddiplomski studiji,Odbor za kulturu i obrazovanje,CULT,zamjenik
+7,Predrag Fred,Matić,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1962-06-02,Požega,Stanko,,sveučilišni preddiplomski studiji,Odbor za prava žena i rodnu ravnopravnost,FEMM,zamjenik
+7,Predrag Fred,Matić,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1962-06-02,Požega,Stanko,,sveučilišni preddiplomski studiji,Odbor za ribarstvo,PECH,clan
+8,Mislav,Kolakušić,,Nezavisni zastupnici,1969-09-15,Zagreb,,,sveučilišni diplomski studiji,"Odbor za građanske slobode, pravosuđe i unutarnje poslove",LIBE,zamjenik
+8,Mislav,Kolakušić,,Nezavisni zastupnici,1969-09-15,Zagreb,,,sveučilišni diplomski studiji,Odbor za pravna pitanja,JURI,clan
+8,Mislav,Kolakušić,,Nezavisni zastupnici,1969-09-15,Zagreb,,,sveučilišni diplomski studiji,Odbor za proračune,BUDG,clan
+9,Romana,Jerković,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1964-11-28,Split,,,poslijediplomski sveučilišni (doktorski) studiji,"Odbor za industriju, istraživanje i energetiku",ITRE,clan
+9,Romana,Jerković,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1964-11-28,Split,,,poslijediplomski sveučilišni (doktorski) studiji,"Odbor za okoliš, javno zdravlje i sigurnost hrane",ENVI,zamjenik
+9,Romana,Jerković,SDP,Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu,1964-11-28,Split,,,poslijediplomski sveučilišni (doktorski) studiji,Posebni odbor za borbu protiv raka,BECA,zamjenik
+10,Ivan Vilibor,Sinčić,Živi zid,Nezavisni zastupnici,1990-08-28,Karlovac,Ivan,Marija,sveučilišni preddiplomski studiji,"Odbor za industriju, istraživanje i energetiku",ITRE,zamjenik
+10,Ivan Vilibor,Sinčić,Živi zid,Nezavisni zastupnici,1990-08-28,Karlovac,Ivan,Marija,sveučilišni preddiplomski studiji,"Odbor za okoliš, javno zdravlje i sigurnost hrane",ENVI,clan
+10,Ivan Vilibor,Sinčić,Živi zid,Nezavisni zastupnici,1990-08-28,Karlovac,Ivan,Marija,sveučilišni preddiplomski studiji,Odbor za poljoprivredu i ruralni razvoj,AGRI,zamjenik
+11,Tomislav,Sokol,HDZ,Klub zastupnika Europske pučke stranke,1982-09-20,Zagreb,,,magistarski studiji,Odbor za regionalni razvoj,REGI,zamjenik
+11,Tomislav,Sokol,HDZ,Klub zastupnika Europske pučke stranke,1982-09-20,Zagreb,,,magistarski studiji,Odbor za unutarnje tržište i zaštitu potrošača,IMCO,clan
+11,Tomislav,Sokol,HDZ,Klub zastupnika Europske pučke stranke,1982-09-20,Zagreb,,,magistarski studiji,Posebni odbor za borbu protiv raka,BECA,zamjenik
+12,Željana,Zovko,HDZ,Klub zastupnika Europske pučke stranke,1970-03-25,Mostar,,,sveučilišni diplomski studiji,Odbor za kulturu i obrazovanje,CULT,zamjenik
+12,Željana,Zovko,HDZ,Klub zastupnika Europske pučke stranke,1970-03-25,Mostar,,,sveučilišni diplomski studiji,Odbor za vanjske poslove,AFET,potpredsjednik
+12,Željana,Zovko,HDZ,Klub zastupnika Europske pučke stranke,1970-03-25,Mostar,,,sveučilišni diplomski studiji,Pododbor za sigurnost i obranu,SEDE,zamjenik
