@@ -1,0 +1,2 @@
+# or
+Otvoreno računarstvo
