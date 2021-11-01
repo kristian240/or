@@ -1,0 +1,338 @@
+[
+  {
+    "id": 2,
+    "ime": "Biljana",
+    "prezime": "Borzan",
+    "nacionalni_klub": "SDP",
+    "klub": "Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu",
+    "datum_rodjenja": "1971-11-29",
+    "mjesto_rodjenja": "Osijek",
+    "otac": "Jovo",
+    "majka": "Rosa",
+    "razina_obrazovanja": "poslijediplomski sveučilišni (doktorski) studiji",
+    "komisije": [
+      {
+        "id": 4,
+        "naziv": "Odbor za unutarnje tržište i zaštitu potrošača",
+        "akronim": "IMCO",
+        "uloga": "clan"
+      },
+      {
+        "id": 5,
+        "naziv": "Odbor za okoliš, javno zdravlje i sigurnost hrane",
+        "akronim": "ENVI",
+        "uloga": "zamjenik"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "ime": "Valter",
+    "prezime": "Flego",
+    "nacionalni_klub": "IDS",
+    "klub": "Klub zastupnika Renew Europe",
+    "datum_rodjenja": "1972-08-15",
+    "mjesto_rodjenja": "Koper",
+    "otac": "Đino",
+    "majka": "Marija",
+    "razina_obrazovanja": "sveučilišni diplomski studiji",
+    "komisije": [
+      { "id": 10, "naziv": "Odbor za promet i turizam", "akronim": "TRAN", "uloga": "zamjenik" },
+      {
+        "id": 9,
+        "naziv": "Odbor za industriju, istraživanje i energetiku",
+        "akronim": "ITRE",
+        "uloga": "clan"
+      },
+      {
+        "id": 11,
+        "naziv": "Odbor za poljoprivredu i ruralni razvoj",
+        "akronim": "AGRI",
+        "uloga": "zamjenik"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "ime": "Sunčana",
+    "prezime": "Glavak",
+    "nacionalni_klub": "HDZ",
+    "klub": "Klub zastupnika Europske pučke stranke",
+    "datum_rodjenja": "1968-12-09",
+    "mjesto_rodjenja": "Čakovec",
+    "otac": null,
+    "majka": null,
+    "razina_obrazovanja": "poslijediplomski sveučilišni (doktorski) studiji",
+    "komisije": [
+      {
+        "id": 12,
+        "naziv": "Posebni odbor za vanjsko upletanje u sve demokratske procese u Europskoj uniji, uključujući dezinformiranje",
+        "akronim": "INGE",
+        "uloga": "clan"
+      },
+      {
+        "id": 5,
+        "naziv": "Odbor za okoliš, javno zdravlje i sigurnost hrane",
+        "akronim": "ENVI",
+        "uloga": "zamjenik"
+      },
+      {
+        "id": 13,
+        "naziv": "Posebni odbor za borbu protiv raka",
+        "akronim": "BECA",
+        "uloga": "zamjenik"
+      },
+      { "id": 1, "naziv": "Odbor za vanjske poslove", "akronim": "AFET", "uloga": "clan" }
+    ]
+  },
+  {
+    "id": 5,
+    "ime": "Ladislav",
+    "prezime": "Ilčić",
+    "nacionalni_klub": "HRAST",
+    "klub": "Europski konzervativci i reformisti",
+    "datum_rodjenja": "1970-08-04",
+    "mjesto_rodjenja": "Varaždin",
+    "otac": "Stanko",
+    "majka": "Julijana",
+    "razina_obrazovanja": "poslijediplomski sveučilišni (doktorski) studiji",
+    "komisije": [
+      {
+        "id": 11,
+        "naziv": "Odbor za poljoprivredu i ruralni razvoj",
+        "akronim": "AGRI",
+        "uloga": "zamjenik"
+      },
+      { "id": 14, "naziv": "Odbor za ribarstvo", "akronim": "PECH", "uloga": "clan" },
+      {
+        "id": 9,
+        "naziv": "Odbor za industriju, istraživanje i energetiku",
+        "akronim": "ITRE",
+        "uloga": "zamjenik"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "ime": "Tonino",
+    "prezime": "Picula",
+    "nacionalni_klub": "SDP",
+    "klub": "Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu",
+    "datum_rodjenja": "1961-08-31",
+    "mjesto_rodjenja": "Mali Lošinj",
+    "otac": null,
+    "majka": null,
+    "razina_obrazovanja": "sveučilišni diplomski studiji",
+    "komisije": [
+      { "id": 1, "naziv": "Odbor za vanjske poslove", "akronim": "AFET", "uloga": "clan" },
+      {
+        "id": 11,
+        "naziv": "Odbor za poljoprivredu i ruralni razvoj",
+        "akronim": "AGRI",
+        "uloga": "zamjenik"
+      },
+      {
+        "id": 12,
+        "naziv": "Posebni odbor za vanjsko upletanje u sve demokratske procese u Europskoj uniji, uključujući dezinformiranje",
+        "akronim": "INGE",
+        "uloga": "clan"
+      },
+      { "id": 15, "naziv": "Odbor za regionalni razvoj", "akronim": "REGI", "uloga": "zamjenik" },
+      { "id": 3, "naziv": "Pododbor za sigurnost i obranu", "akronim": "SEDE", "uloga": "zamjenik" }
+    ]
+  },
+  {
+    "id": 7,
+    "ime": "Predrag Fred",
+    "prezime": "Matić",
+    "nacionalni_klub": "SDP",
+    "klub": "Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu",
+    "datum_rodjenja": "1962-06-02",
+    "mjesto_rodjenja": "Požega",
+    "otac": "Stanko",
+    "majka": null,
+    "razina_obrazovanja": "sveučilišni preddiplomski studiji",
+    "komisije": [
+      {
+        "id": 2,
+        "naziv": "Odbor za kulturu i obrazovanje",
+        "akronim": "CULT",
+        "uloga": "zamjenik"
+      },
+      {
+        "id": 16,
+        "naziv": "Odbor za prava žena i rodnu ravnopravnost",
+        "akronim": "FEMM",
+        "uloga": "zamjenik"
+      },
+      { "id": 14, "naziv": "Odbor za ribarstvo", "akronim": "PECH", "uloga": "clan" }
+    ]
+  },
+  {
+    "id": 8,
+    "ime": "Mislav",
+    "prezime": "Kolakušić",
+    "nacionalni_klub": null,
+    "klub": "Nezavisni zastupnici",
+    "datum_rodjenja": "1969-09-15",
+    "mjesto_rodjenja": "Zagreb",
+    "otac": null,
+    "majka": null,
+    "razina_obrazovanja": "sveučilišni diplomski studiji",
+    "komisije": [
+      { "id": 17, "naziv": "Odbor za pravna pitanja", "akronim": "JURI", "uloga": "clan" },
+      { "id": 7, "naziv": "Odbor za proračune", "akronim": "BUDG", "uloga": "clan" },
+      {
+        "id": 18,
+        "naziv": "Odbor za građanske slobode, pravosuđe i unutarnje poslove",
+        "akronim": "LIBE",
+        "uloga": "zamjenik"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "ime": "Romana",
+    "prezime": "Jerković",
+    "nacionalni_klub": "SDP",
+    "klub": "Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu",
+    "datum_rodjenja": "1964-11-28",
+    "mjesto_rodjenja": "Split",
+    "otac": null,
+    "majka": null,
+    "razina_obrazovanja": "poslijediplomski sveučilišni (doktorski) studiji",
+    "komisije": [
+      {
+        "id": 5,
+        "naziv": "Odbor za okoliš, javno zdravlje i sigurnost hrane",
+        "akronim": "ENVI",
+        "uloga": "zamjenik"
+      },
+      {
+        "id": 13,
+        "naziv": "Posebni odbor za borbu protiv raka",
+        "akronim": "BECA",
+        "uloga": "zamjenik"
+      },
+      {
+        "id": 9,
+        "naziv": "Odbor za industriju, istraživanje i energetiku",
+        "akronim": "ITRE",
+        "uloga": "clan"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "ime": "Ivan Vilibor",
+    "prezime": "Sinčić",
+    "nacionalni_klub": "Živi zid",
+    "klub": "Nezavisni zastupnici",
+    "datum_rodjenja": "1990-08-28",
+    "mjesto_rodjenja": "Karlovac",
+    "otac": "Ivan",
+    "majka": "Marija",
+    "razina_obrazovanja": "sveučilišni preddiplomski studiji",
+    "komisije": [
+      {
+        "id": 9,
+        "naziv": "Odbor za industriju, istraživanje i energetiku",
+        "akronim": "ITRE",
+        "uloga": "zamjenik"
+      },
+      {
+        "id": 5,
+        "naziv": "Odbor za okoliš, javno zdravlje i sigurnost hrane",
+        "akronim": "ENVI",
+        "uloga": "clan"
+      },
+      {
+        "id": 11,
+        "naziv": "Odbor za poljoprivredu i ruralni razvoj",
+        "akronim": "AGRI",
+        "uloga": "zamjenik"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "ime": "Karlo",
+    "prezime": "Ressler",
+    "nacionalni_klub": "HDZ",
+    "klub": "Klub zastupnika Europske pučke stranke",
+    "datum_rodjenja": "1989-12-26",
+    "mjesto_rodjenja": "Zagreb",
+    "otac": "Dubravko",
+    "majka": "Ančica",
+    "razina_obrazovanja": "magistarski studiji",
+    "komisije": [
+      {
+        "id": 6,
+        "naziv": "Posebni odbor za umjetnu inteligenciju u digitalnom dobu",
+        "akronim": "AIDA",
+        "uloga": "potpredsjenik"
+      },
+      { "id": 7, "naziv": "Odbor za proračune", "akronim": "BUDG", "uloga": "clan" },
+      {
+        "id": 8,
+        "naziv": "Odbor za građanske slobode, pravosuđe i unutarnje poslove",
+        "akronim": "LIBE",
+        "uloga": "zamjenik"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "ime": "Tomislav",
+    "prezime": "Sokol",
+    "nacionalni_klub": "HDZ",
+    "klub": "Klub zastupnika Europske pučke stranke",
+    "datum_rodjenja": "1982-09-20",
+    "mjesto_rodjenja": "Zagreb",
+    "otac": null,
+    "majka": null,
+    "razina_obrazovanja": "magistarski studiji",
+    "komisije": [
+      {
+        "id": 13,
+        "naziv": "Posebni odbor za borbu protiv raka",
+        "akronim": "BECA",
+        "uloga": "zamjenik"
+      },
+      { "id": 15, "naziv": "Odbor za regionalni razvoj", "akronim": "REGI", "uloga": "zamjenik" },
+      {
+        "id": 4,
+        "naziv": "Odbor za unutarnje tržište i zaštitu potrošača",
+        "akronim": "IMCO",
+        "uloga": "clan"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "ime": "Željana",
+    "prezime": "Zovko",
+    "nacionalni_klub": "HDZ",
+    "klub": "Klub zastupnika Europske pučke stranke",
+    "datum_rodjenja": "1970-03-25",
+    "mjesto_rodjenja": "Mostar",
+    "otac": null,
+    "majka": null,
+    "razina_obrazovanja": "sveučilišni diplomski studiji",
+    "komisije": [
+      {
+        "id": 3,
+        "naziv": "Pododbor za sigurnost i obranu",
+        "akronim": "SEDE",
+        "uloga": "zamjenik"
+      },
+      {
+        "id": 1,
+        "naziv": "Odbor za vanjske poslove",
+        "akronim": "AFET",
+        "uloga": "potpredsjednik"
+      },
+      { "id": 2, "naziv": "Odbor za kulturu i obrazovanje", "akronim": "CULT", "uloga": "zamjenik" }
+    ]
+  }
+]
