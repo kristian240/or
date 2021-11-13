@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Otvoreno računarstvo</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      body {
+        background-color: aqua;
+      }
+
+      .container {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      main {
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      #readme-data {
+        border-collapse: collapse;
+      }
+
+      #readme-data td,
+      #readme-data th {
+        padding: 8px;
+        border: 1px solid black;
+      }
+
+      #readme-data th {
+        width: fit-content;
+      }
+
+      footer {
+        text-align: center;
+        padding: 16px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Otvoreni podaci o hrvatskim zastupnicima u EU</h1>
+      </div>
+
+      <table id="readme-data" class="container">
+        <tbody>
+          <tr>
+            <th>Naziv</th>
+            <td>Otvoreni podaci o hrvatskim zastupnicima u EU</td>
+          </tr>
+          <tr>
+            <th>Opis</th>
+            <td>
+              ime zastupnika, prezime zastupnika, nacionalni klub zastupnika, europski klub
+              zastupnika, datum rođenja zastupnika, mjesto rođenja zastupnika, ime oca zastupnika,
+              ime majke zastupnika, razina obrazovanja zastupnika, komisije u kojima je zastupnik
+              aktivan
+            </td>
+          </tr>
+          <tr>
+            <th>Licenca</th>
+            <td><a href="/LICENSE">Creative Commons Zero v1.0 Universal</a></td>
+          </tr>
+          <tr>
+            <th>Autor</th>
+            <td>Kristian Djaković</td>
+          </tr>
+          <tr>
+            <th>Kontakt</th>
+            <td><a href="mailto:kristian.djakovic2@gmail.com">kristian.djakovic2@gmail.com</a></td>
+          </tr>
+          <tr>
+            <th>Verzija</th>
+            <td>v1.0.0</td>
+          </tr>
+          <tr>
+            <th>Jezik</th>
+            <td>hrvatski</td>
+          </tr>
+          <tr>
+            <th>Ključne riječi</th>
+            <td>zastupnik, Europska unija, Hrvatska, politika</td>
+          </tr>
+          <tr>
+            <th>Kreirano</th>
+            <td>1. studenoga 2021.</td>
+          </tr>
+          <tr>
+            <th>Format datuma</th>
+            <td>1ISO 8601</td>
+          </tr>
+          <tr>
+            <th>Podaci</th>
+            <td><a href="./data.csv">CSV format</a><br /><a href="./data.json">JSON format</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer class="container">&copy; 2021 Kristian Djaković</footer>
+  </body>
+</html>
