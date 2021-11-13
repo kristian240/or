@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podatci | Otvoreni podaci o hrvatskim zastupnicima u EU</title>
+    <meta
+      name="description"
+      content="Otvoreni podaci o hrvatskim zastupnicima u parlamentu Europske unije dostupni u JSON i CSV formatu"
+    />
+    <meta name="keywords" content="zastupnik, Europska unija, Hrvatska, politika" />
+    <meta name="author" content="Kristian Djaković" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"
+    ></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      body {
+        background-color: aqua;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .container {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      main {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        flex: 1;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 0;
+      }
+
+      footer {
+        text-align: center;
+        padding: 16px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Otvoreni podaci o hrvatskim zastupnicima u EU</h1>
+      </div>
+
+      <table id="table-data">
+        <thead>
+          <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Nacionalni klub</th>
+            <th>Klub</th>
+            <th>Datum rođenja</th>
+            <th>Mjesto rođenja</th>
+            <th>Naziv komisije</th>
+            <th>Uloga</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+
+    <footer class="container">&copy; 2021 Kristian Djaković</footer>
+
+    <script>
+      const table = new DataTable('#table-data', {
+        ajax: 'http://localhost:3000/data',
+        dataSrc: 'data',
+        columns: [
+          { data: 'ime' },
+          { data: 'prezime' },
+          { data: 'nacionalni_klub' },
+          { data: 'klub' },
+          { data: 'datum_rodjenja' },
+          { data: 'mjesto_rodjenja' },
+          { data: 'naziv' },
+          { data: 'uloga' },
+        ],
+      });
+    </script>
+  </body>
+</html>
