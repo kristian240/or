@@ -18,6 +18,12 @@
       href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css"
     />
 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css"
+    />
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -28,6 +34,21 @@
       type="text/javascript"
       charset="utf8"
       src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"
+    ></script>
+
+    <script
+      src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"
+      crossorigin="anonymous"
     ></script>
 
     <style>
@@ -98,8 +119,80 @@
     <footer class="container">&copy; 2021 Kristian Djaković</footer>
 
     <script>
-      const table = new DataTable('#table-data', {
+      const TABLE_ID = '#table-data';
+
+      $(TABLE_ID + ' tfoot th').each(function () {
+        var title = $(this).text();
+        $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+      });
+
+      window.table = new DataTable(TABLE_ID, {
         ajax: 'http://localhost:3000/data',
+        dom: 'Bfrtip',
+        buttons: [
+          'csv',
+          {
+            text: 'json',
+            action: function (_, api) {
+              const tableData = api
+                .data()
+                .toArray()
+                .filter(
+                  ({
+                    ime,
+                    prezime,
+                    nacionalni_klub,
+                    klub,
+                    datum_rodjenja,
+                    mjesto_rodjenja,
+                    naziv,
+                    uloga,
+                  }) => {
+                    const searchTerm = api.search().toLowerCase();
+
+                    return (
+                      ime?.toLowerCase().indexOf(searchTerm) >= 0 ||
+                      prezime?.toLowerCase().indexOf(searchTerm) >= 0 ||
+                      nacionalni_klub?.toLowerCase().indexOf(searchTerm) >= 0 ||
+                      klub?.toLowerCase().indexOf(searchTerm) >= 0 ||
+                      datum_rodjenja?.toLowerCase().indexOf(searchTerm) >= 0 ||
+                      mjesto_rodjenja?.toLowerCase().indexOf(searchTerm) >= 0 ||
+                      naziv?.toLowerCase().indexOf(searchTerm) >= 0 ||
+                      uloga?.toLowerCase().indexOf(searchTerm) >= 0
+                    );
+                  }
+                );
+
+              console.log('here');
+
+              const jsonData = tableData.reduce((arr, row) => {
+                const key = row.zastupnik_id;
+                const { naziv, uloga, komisija_id, id, akronim, ...zastupnik } = row;
+                const komisija = {
+                  komisija_id: row.komisija_id,
+                  akronim: row.akronim,
+                  naziv: row.naziv,
+                  uloga: row.uloga,
+                };
+
+                const item = arr.find(({ zastupnik_id }) => key === zastupnik_id) || {
+                  ...zastupnik,
+                  komisije: [],
+                };
+
+                if (item.komisije.length === 0) {
+                  arr.push(item);
+                }
+
+                item.komisije.push(komisija);
+
+                return arr;
+              }, []);
+
+              $.fn.dataTable.fileSave(new Blob([JSON.stringify(jsonData)]), 'data.json');
+            },
+          },
+        ],
         dataSrc: 'data',
         columns: [
           { data: 'ime' },
@@ -111,6 +204,7 @@
           { data: 'naziv' },
           { data: 'uloga' },
         ],
+        // initComp
       });
     </script>
   </body>

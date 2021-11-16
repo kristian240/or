@@ -12,7 +12,7 @@ app.use(cors());
 
 app.get('/data', async (req, res) => {
   const data = await client.query(
-    `select ime, prezime, nacionalni_klub, klub, datum_rodjenja, mjesto_rodjenja, naziv, uloga
+    `select *
     from zastupnik
       join zastupnik_komisija on zastupnik_komisija.zastupnik_id = zastupnik.id
       join komisija on zastupnik_komisija.komisija_id = komisija.id
