@@ -1,0 +1,289 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": [],
+  "examples": [
+    [
+      {
+        "id": 2,
+        "ime": "Biljana",
+        "prezime": "Borzan",
+        "nacionalni_klub": "SDP",
+        "klub": "Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu",
+        "datum_rodjenja": "1971-11-29",
+        "mjesto_rodjenja": "Osijek",
+        "otac": "Jovo",
+        "majka": "Rosa",
+        "razina_obrazovanja": "poslijediplomski sveučilišni (doktorski) studiji",
+        "komisije": [
+          {
+            "id": 4,
+            "naziv": "Odbor za unutarnje tržište i zaštitu potrošača",
+            "akronim": "IMCO",
+            "uloga": "clan"
+          },
+          {
+            "id": 5,
+            "naziv": "Odbor za okoliš, javno zdravlje i sigurnost hrane",
+            "akronim": "ENVI",
+            "uloga": "zamjenik"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "ime": "Valter",
+        "prezime": "Flego",
+        "nacionalni_klub": "IDS",
+        "klub": "Klub zastupnika Renew Europe",
+        "datum_rodjenja": "1972-08-15",
+        "mjesto_rodjenja": "Koper",
+        "otac": "Đino",
+        "majka": "Marija",
+        "razina_obrazovanja": "sveučilišni diplomski studiji",
+        "komisije": [
+          {
+            "id": 10,
+            "naziv": "Odbor za promet i turizam",
+            "akronim": "TRAN",
+            "uloga": "zamjenik"
+          },
+          {
+            "id": 9,
+            "naziv": "Odbor za industriju, istraživanje i energetiku",
+            "akronim": "ITRE",
+            "uloga": "clan"
+          },
+          {
+            "id": 11,
+            "naziv": "Odbor za poljoprivredu i ruralni razvoj",
+            "akronim": "AGRI",
+            "uloga": "zamjenik"
+          }
+        ]
+      }
+    ]
+  ],
+  "additionalItems": true,
+  "items": {
+    "$id": "#/items",
+    "anyOf": [
+      {
+        "$id": "#/items/anyOf/0",
+        "type": "object",
+        "title": "The first anyOf schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "id": 2,
+            "ime": "Biljana",
+            "prezime": "Borzan",
+            "nacionalni_klub": "SDP",
+            "klub": "Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu",
+            "datum_rodjenja": "1971-11-29",
+            "mjesto_rodjenja": "Osijek",
+            "otac": "Jovo",
+            "majka": "Rosa",
+            "razina_obrazovanja": "poslijediplomski sveučilišni (doktorski) studiji",
+            "komisije": [
+              {
+                "id": 4,
+                "naziv": "Odbor za unutarnje tržište i zaštitu potrošača",
+                "akronim": "IMCO",
+                "uloga": "clan"
+              },
+              {
+                "id": 5,
+                "naziv": "Odbor za okoliš, javno zdravlje i sigurnost hrane",
+                "akronim": "ENVI",
+                "uloga": "zamjenik"
+              }
+            ]
+          }
+        ],
+        "required": [
+          "id",
+          "ime",
+          "prezime",
+          "nacionalni_klub",
+          "klub",
+          "datum_rodjenja",
+          "mjesto_rodjenja",
+          "otac",
+          "majka",
+          "razina_obrazovanja",
+          "komisije"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/anyOf/0/properties/id",
+            "type": "integer",
+            "title": "The id schema",
+            "description": "unikatni ID",
+            "default": 0,
+            "examples": [2]
+          },
+          "ime": {
+            "$id": "#/items/anyOf/0/properties/ime",
+            "type": "string",
+            "title": "The ime schema",
+            "description": "Ime zastupnika",
+            "default": "",
+            "examples": ["Biljana"]
+          },
+          "prezime": {
+            "$id": "#/items/anyOf/0/properties/prezime",
+            "type": "string",
+            "title": "The prezime schema",
+            "description": "Prezime zastupnika",
+            "default": "",
+            "examples": ["Borzan"]
+          },
+          "nacionalni_klub": {
+            "$id": "#/items/anyOf/0/properties/nacionalni_klub",
+            "type": "string",
+            "title": "The nacionalni_klub schema",
+            "description": "Klub u Republici Hrvatskoj",
+            "default": "",
+            "examples": ["SDP"]
+          },
+          "klub": {
+            "$id": "#/items/anyOf/0/properties/klub",
+            "type": "string",
+            "title": "The klub schema",
+            "description": "Klub u europskom parlamentu",
+            "default": "",
+            "examples": [
+              "Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu"
+            ]
+          },
+          "datum_rodjenja": {
+            "$id": "#/items/anyOf/0/properties/datum_rodjenja",
+            "type": "string",
+            "title": "The datum_rodjenja schema",
+            "description": "Datum rođenja zastupnika",
+            "default": "",
+            "examples": ["1971-11-29"]
+          },
+          "mjesto_rodjenja": {
+            "$id": "#/items/anyOf/0/properties/mjesto_rodjenja",
+            "type": "string",
+            "title": "The mjesto_rodjenja schema",
+            "description": "Mjesto rođenja zastupnika",
+            "default": "",
+            "examples": ["Osijek"]
+          },
+          "otac": {
+            "$id": "#/items/anyOf/0/properties/otac",
+            "type": "string",
+            "title": "The otac schema",
+            "description": "Ime oca zastupnika",
+            "default": "",
+            "examples": ["Jovo"]
+          },
+          "majka": {
+            "$id": "#/items/anyOf/0/properties/majka",
+            "type": "string",
+            "title": "The majka schema",
+            "description": "Ime majke zastupnika",
+            "default": "",
+            "examples": ["Rosa"]
+          },
+          "razina_obrazovanja": {
+            "$id": "#/items/anyOf/0/properties/razina_obrazovanja",
+            "type": "string",
+            "title": "The razina_obrazovanja schema",
+            "description": "Razina obrazovanja zastupnika",
+            "default": "",
+            "examples": ["poslijediplomski sveučilišni (doktorski) studiji"]
+          },
+          "komisije": {
+            "$id": "#/items/anyOf/0/properties/komisije",
+            "type": "array",
+            "title": "The komisije schema",
+            "description": "Komisije zastupinka",
+            "default": [],
+            "examples": [
+              [
+                {
+                  "id": 4,
+                  "naziv": "Odbor za unutarnje tržište i zaštitu potrošača",
+                  "akronim": "IMCO",
+                  "uloga": "clan"
+                },
+                {
+                  "id": 5,
+                  "naziv": "Odbor za okoliš, javno zdravlje i sigurnost hrane",
+                  "akronim": "ENVI",
+                  "uloga": "zamjenik"
+                }
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/items/anyOf/0/properties/komisije/items",
+              "anyOf": [
+                {
+                  "$id": "#/items/anyOf/0/properties/komisije/items/anyOf/0",
+                  "type": "object",
+                  "title": "The first anyOf schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                    {
+                      "id": 4,
+                      "naziv": "Odbor za unutarnje tržište i zaštitu potrošača",
+                      "akronim": "IMCO",
+                      "uloga": "clan"
+                    }
+                  ],
+                  "required": ["id", "naziv", "akronim", "uloga"],
+                  "properties": {
+                    "id": {
+                      "$id": "#/items/anyOf/0/properties/komisije/items/anyOf/0/properties/id",
+                      "type": "integer",
+                      "title": "The id schema",
+                      "description": "Unikatni ID",
+                      "default": 0,
+                      "examples": [4]
+                    },
+                    "naziv": {
+                      "$id": "#/items/anyOf/0/properties/komisije/items/anyOf/0/properties/naziv",
+                      "type": "string",
+                      "title": "The naziv schema",
+                      "description": "Naziv komisije",
+                      "default": "",
+                      "examples": ["Odbor za unutarnje tržište i zaštitu potrošača"]
+                    },
+                    "akronim": {
+                      "$id": "#/items/anyOf/0/properties/komisije/items/anyOf/0/properties/akronim",
+                      "type": "string",
+                      "title": "The akronim schema",
+                      "description": "Akronim komisije",
+                      "default": "",
+                      "examples": ["IMCO"]
+                    },
+                    "uloga": {
+                      "$id": "#/items/anyOf/0/properties/komisije/items/anyOf/0/properties/uloga",
+                      "type": "string",
+                      "title": "The uloga schema",
+                      "description": "Uloga zastupnika u komisiji",
+                      "default": "",
+                      "examples": ["clan"]
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    ]
+  }
+}
