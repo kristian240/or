@@ -113,6 +113,16 @@
           </tr>
         </thead>
         <tbody></tbody>
+        <tfoot>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tfoot>
       </table>
     </main>
 
@@ -134,11 +144,12 @@
           {
             text: 'json',
             action: function (_, api) {
-              const tableData = api
-                .data()
-                .toArray()
-                .filter(
-                  ({
+              const rawData = api.data().toArray();
+
+              const tableData = api.buttons
+                .exportData()
+                .body.map(
+                  ([
                     ime,
                     prezime,
                     nacionalni_klub,
@@ -147,23 +158,20 @@
                     mjesto_rodjenja,
                     naziv,
                     uloga,
-                  }) => {
-                    const searchTerm = api.search().toLowerCase();
-
-                    return (
-                      ime?.toLowerCase().indexOf(searchTerm) >= 0 ||
-                      prezime?.toLowerCase().indexOf(searchTerm) >= 0 ||
-                      nacionalni_klub?.toLowerCase().indexOf(searchTerm) >= 0 ||
-                      klub?.toLowerCase().indexOf(searchTerm) >= 0 ||
-                      datum_rodjenja?.toLowerCase().indexOf(searchTerm) >= 0 ||
-                      mjesto_rodjenja?.toLowerCase().indexOf(searchTerm) >= 0 ||
-                      naziv?.toLowerCase().indexOf(searchTerm) >= 0 ||
-                      uloga?.toLowerCase().indexOf(searchTerm) >= 0
+                  ]) => {
+                    return rawData.find(
+                      (row) =>
+                        ime === row.ime &&
+                        prezime === row.prezime &&
+                        nacionalni_klub === row.nacionalni_klub &&
+                        klub === row.klub &&
+                        datum_rodjenja === row.datum_rodjenja &&
+                        mjesto_rodjenja === row.mjesto_rodjenja &&
+                        naziv === row.naziv &&
+                        uloga === row.uloga
                     );
                   }
                 );
-
-              console.log('here');
 
               const jsonData = tableData.reduce((arr, row) => {
                 const key = row.zastupnik_id;
@@ -204,7 +212,20 @@
           { data: 'naziv' },
           { data: 'uloga' },
         ],
-        // initComp
+        initComplete: function () {
+          // Apply the search
+          this.api()
+            .columns()
+            .every(function () {
+              var that = this;
+
+              $('input', this.footer()).on('keyup change clear', function () {
+                if (that.search() !== this.value) {
+                  that.search(this.value).draw();
+                }
+              });
+            });
+        },
       });
     </script>
   </body>
