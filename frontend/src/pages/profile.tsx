@@ -1,11 +1,21 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { Container } from '@chakra-ui/layout';
-import { Center, Image, Spinner, Stat, StatLabel, StatNumber, VStack } from '@chakra-ui/react';
+import {
+  Center,
+  Image,
+  Spinner,
+  Stat,
+  StatLabel,
+  StatNumber,
+  useToast,
+  VStack,
+} from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Navigation } from '../components/Navigation';
 
 const Profile = () => {
+  const toast = useToast();
   const { isAuthenticated, user, isLoading } = useAuth0();
   const router = useRouter();
 
@@ -13,6 +23,12 @@ const Profile = () => {
     if (isLoading) return;
     if (isAuthenticated) return;
 
+    toast({
+      title: 'Niste prijavljeni',
+      description: 'Morate biti prijavljeni kako biste posjetili svoj korisnički račun',
+      status: 'error',
+      isClosable: true,
+    });
     router.push('/');
   }, []);
 
