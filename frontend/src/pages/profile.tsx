@@ -30,7 +30,7 @@ const Profile = () => {
       isClosable: true,
     });
     router.push('/');
-  }, []);
+  }, [isLoading, isAuthenticated, router, toast]);
 
   return (
     <>

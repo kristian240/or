@@ -5,28 +5,9 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Navigation } from '../components/Navigation';
 
-function downloadFile(content: Blob, fileName: string) {
-  const file = new Blob([content], { type: 'text/plain' });
-
-  const element = document.createElement('a');
-  element.href = URL.createObjectURL(file);
-  element.download = fileName;
-  element.click();
-}
-
-const handleDownloadCSV = () =>
-  fetch('/api/zastupnici', { headers: { accept: 'text/csv' } })
-    .then((res) => res.blob())
-    .then((blob) => downloadFile(blob, 'zastupnici.csv'));
-
-const handleDownloadJSON = () =>
-  fetch('/api/zastupnici', { headers: { accept: 'application/json' } })
-    .then((res) => res.blob())
-    .then((blob) => downloadFile(blob, 'zastupnici.json'));
-
 const RefreshPage = () => {
   const toast = useToast();
-  const { isAuthenticated, user, isLoading } = useAuth0();
+  const { isAuthenticated, isLoading } = useAuth0();
   const router = useRouter();
 
   useEffect(() => {
@@ -35,12 +16,12 @@ const RefreshPage = () => {
 
     toast({
       title: 'Niste prijavljeni',
-      description: 'Morate biti prijavljeni kako biste posjetili svoj korisnički račun',
+      description: 'Morate biti prijavljeni kako biste posjetili stranicu za osvježavanje',
       status: 'error',
       isClosable: true,
     });
     router.push('/');
-  }, []);
+  }, [isLoading, isAuthenticated, router, toast]);
 
   return (
     <>
@@ -53,8 +34,12 @@ const RefreshPage = () => {
             Preuzmi podatke
           </Text>
           <HStack>
-            <Button onClick={handleDownloadCSV}>CSV</Button>
-            <Button onClick={handleDownloadJSON}>JSON</Button>
+            <Button as='a' href='/api/zastupnici' download='zastupnici.csv'>
+              CSV
+            </Button>
+            <Button as='a' href='/api/zastupnici' download='zastupnici.json'>
+              JSON
+            </Button>
           </HStack>
         </Container>
       ) : (
