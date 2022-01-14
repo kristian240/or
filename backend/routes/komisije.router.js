@@ -37,4 +37,12 @@ router.get('/:id', async (req, res) => {
   res.json({ status: 'OK', message: 'Komisija', response: data.rows[0] });
 });
 
+router.use((req, res) => {
+  res.status(501).json({
+    status: 'Not Implemented',
+    message: 'Metoda nije implementirana za traženi resurs',
+    response: null,
+  });
+});
+
 module.exports = router;

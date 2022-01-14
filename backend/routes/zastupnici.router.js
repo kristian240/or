@@ -102,7 +102,7 @@ router.post(
   body('mjesto_rodjenja').optional().isString(),
   body('nacionalni_klub').isString().withMessage('Nacionalni klub je obavezan'),
   body('razina_obrazovanja').isString().withMessage('Razina obrazovanja je obavezna'),
-  body('datum_rodjenja').isDate().withMessage('Razina obrazovanja je obavezna'),
+  body('datum_rodjenja').isDate().withMessage('Datum rodjenja je obavezna'),
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -111,10 +111,10 @@ router.post(
         .json({ status: 'Bad Request', message: 'Podatci nisu validni', response: errors.array() });
     }
 
-    const data = await db.query(
+    await db.query(
       `insert into zastupnik
         (ime, prezime, klub, otac, majka, mjesto_rodjenja, nacionalni_klub, razina_obrazovanja, datum_rodjenja)
-      values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)`,
+      values ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
       [
         req.body.ime || null,
         req.body.prezime || null,
@@ -130,7 +130,7 @@ router.post(
 
     return res
       .status(201)
-      .json({ status: 'Created', message: 'Zastupnik kreiran', response: data.rows[0] });
+      .json({ status: 'Created', message: 'Zastupnik kreiran', response: null });
   }
 );
 
@@ -201,12 +201,20 @@ router.delete('/:id', async (req, res) => {
       .json({ status: 'Not Found', message: 'Zastupnik ne postoji', response: null });
 
   await db.query(
-    `delete from actor
+    `delete from zastupnik
     where id = $1`,
     [id]
   );
 
   return res.status(200).json({ status: 'OK', message: 'Zastupnik izbrisan', response: null });
+});
+
+router.use((req, res) => {
+  res.status(501).json({
+    status: 'Not Implemented',
+    message: 'Metoda nije implementirana za traženi resurs',
+    response: null,
+  });
 });
 
 module.exports = router;
