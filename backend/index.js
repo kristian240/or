@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 const db = require('./utils/db');
 
@@ -22,6 +23,10 @@ app.get('/data', async (req, res) => {
   );
 
   res.json({ data: data.rows });
+});
+
+app.get('/openapi', function (req, res) {
+  res.sendFile(path.join(__dirname, '../openapi.json'));
 });
 
 app.use('/v2', v2Router);

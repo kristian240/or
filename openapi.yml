@@ -1,0 +1,439 @@
+openapi: 3.0.0
+
+info:
+  title: Zastupnici API
+  version: '3.0'
+  contact:
+    email: kristian.djakovic@fer.hr
+  license:
+    name: Creative Commons Zero v1.0 Universal
+
+
+components:
+  schemas:
+    Zastupnik:
+      type: object
+      properties:
+        id:
+          type: number
+          example: 2
+        ime:
+          type: string
+          example: Karlo
+        prezime:
+          type: string
+          example: Ressler
+        nacionalni_klub:
+          type: string
+          example: HDZ
+        klub:
+          type: string
+          example: Klub zastupnika Europske pučke stranke
+        datum_rodjenja:
+          type: string
+          example: "1989-12-25T23:00:00.000Z"
+        mjesto_rodjenja:
+          type: string
+          example: Zagreb
+        otac:
+          type: string
+          example: Dubravko
+        majka:
+          type: string
+          example: Ančica
+        razina_obrazovanja:
+          type: string
+          example: magistarski studiji
+        komisija_id:
+          type: array
+          items:
+            type: number
+          example: [6, 7, 8]
+    Komisija:
+      type: object
+      properties:
+        id:
+          type: number
+          example: 2
+        naziv:
+          type: string
+          example: Odbor za vanjske poslove
+        akronim:
+          type: string
+          example: AFET
+
+paths:
+  /v2/zastupnici:
+    get:
+      summary: Svi zastupnici
+      description: Dohvati sve zastupnike
+      responses:
+        '200':
+          description: JSON array svih zastupnika
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: OK
+                  message: 
+                    type: string
+                    example: Popis zastupnika
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Zastupnik'
+    post:
+      summary: Novi zastupnik
+      description: Stvori novog zastupnika
+      responses:
+        '201':
+          description: Uspješno kreiran zastupnik
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Created
+                  message: 
+                    type: string
+                    example: Zastupnik kreiran
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true
+        '400':
+          description: Nepotpuni podatci za kreiranje
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Bad Request
+                  message: 
+                    type: string
+                    example: Podatci nisu validni
+                  error:
+                    type: object
+  
+  /v2/zastupnici/{id}:
+    get:
+      summary: Dohvati zastupnika
+      description: Dohvati zastupnike po ID
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID zastupnika
+      responses:
+        '200':
+          description: JSON zastupnika sa zadanim ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: OK
+                  message: 
+                    type: string
+                    example: Zastupnik
+                  data:
+                    $ref: '#/components/schemas/Zastupnik'
+        '400':
+          description: Ne validan ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Bad Request
+                  message: 
+                    type: string
+                    example: ID mora biti broj
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true
+        '404':
+          description: Zastupnik ne postoji
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Not Found
+                  message: 
+                    type: string
+                    example: Zastupnik ne postoji
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true
+    put:
+      summary: Ažuriraj zastupnika
+      description: Ažuriraj postojećeg zastupnika
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID zastupnika
+      responses:
+        '200':
+          description: Uspješno ažuriran zastupnik
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: OK
+                  message: 
+                    type: string
+                    example: Zastupnik ažuriran
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true
+        '400':
+          description: Nepotpuni podatci za kreiranje
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Bad Request
+                  message: 
+                    type: string
+                    example: Podatci nisu validni
+                  error:
+                    type: object
+        '404':
+          description: Zastupnik ne postoji
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Not Found
+                  message: 
+                    type: string
+                    example: Zastupnik ne postoji
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true
+    delete:
+      summary: Izbriši zastupnika
+      description: Izbriši postojećeg zastupnika
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID zastupnika
+      responses:
+        '200':
+          description: Uspješno izbrisan zastupnik
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: OK
+                  message: 
+                    type: string
+                    example: Zastupnik izbrisan
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true
+        '404':
+          description: Zastupnik ne postoji
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Not Found
+                  message: 
+                    type: string
+                    example: Zastupnik ne postoji
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true
+                      
+  /v2/zastupnici/{id}/komisije:
+    get:
+      summary: Dohvati zastupnikove komisije
+      description: Dohvati zastupnikove komisije
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID zastupnika
+      responses:
+        '200':
+          description: JSON komisija zastupnika sa zadanim ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: OK
+                  message: 
+                    type: string
+                    example: Zastupnik
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Zastupnik'
+        '400':
+          description: Ne validan ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Bad Request
+                  message: 
+                    type: string
+                    example: ID mora biti broj
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true
+        '404':
+          description: Zastupnik ne postoji
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Not Found
+                  message: 
+                    type: string
+                    example: Zastupnik ne postoji
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true
+                      
+  /v2/komisije:
+    get:
+      summary: Sve komisije
+      description: Dohvati sve komisije
+      responses:
+        '200':
+          description: JSON array svih komisija
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: OK
+                  message: 
+                    type: string
+                    example: Popis komisija
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Komisija'
+    
+  /v2/komisije/{id}:
+    get:
+      summary: Dohvati komisiju
+      description: Dohvati komisiju po ID
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID komisije
+      responses:
+        '200':
+          description: JSON komisija sa zadanim ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: OK
+                  message: 
+                    type: string
+                    example: Komisija
+                  data:
+                    $ref: '#/components/schemas/Komisija'
+        '400':
+          description: Ne validan ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Bad Request
+                  message: 
+                    type: string
+                    example: ID mora biti broj
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true
+        '404':
+          description: Komisija ne postoji
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    example: Not Found
+                  message: 
+                    type: string
+                    example: Komisija ne postoji
+                  data:
+                    allOf:
+                      - type: object
+                      - nullable: true

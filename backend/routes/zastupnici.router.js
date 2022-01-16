@@ -108,7 +108,7 @@ router.post(
     if (!errors.isEmpty()) {
       return res
         .status(400)
-        .json({ status: 'Bad Request', message: 'Podatci nisu validni', response: errors.array() });
+        .json({ status: 'Bad Request', message: 'Podatci nisu validni', error: errors.array() });
     }
 
     await db.query(
